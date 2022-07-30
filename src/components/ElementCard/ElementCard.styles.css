@@ -1,0 +1,50 @@
+.element__card {
+  border: 1px solid black;
+  height: 95px;
+  width: 80px;
+  padding: 5px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.symbol__style {
+  font-size: 24px;
+}
+
+.Gas {
+  color: firebrick;
+}
+
+.Solid {
+  color: black;
+}
+
+.Liquid {
+  color: blue;
+}
+
+.Unknown {
+  color: dimgray;
+}
+
+.Reactive_nonmetals {
+  background-color: lawngreen;
+}
+
+.Noble_gases {
+  background-color: mediumorchid;
+}
+
+.Alkali_metals {
+  background-color: orange;
+}
+
+.Alkali_earth_metals {
+  background-color: gold;
+}
+
+.Post-transition_metals {
+  background-color: darkturquoise;
+}
