@@ -8,13 +8,18 @@ const ElementCard = ({
   AtomicMass,
   StateOfMatter,
   Classification,
+  EmptyCard,
 }) => {
   return (
-    <div className={`element__card ${Classification}`}>
-      <div>{AtomicNumber}</div>
+    <div
+      className={`element__card ${
+        Classification ? Classification : "card__hidden"
+      }`}
+    >
+      <div className="atomicNumber__style">{AtomicNumber}</div>
       <div className={`symbol__style ${StateOfMatter}`}>{Symbol}</div>
-      <div>{Name}</div>
-      <div>{AtomicMass}</div>
+      <div className="name__style">{Name}</div>
+      <div className="atomicMass__style">{AtomicMass}</div>
     </div>
   );
 };

@@ -1,0 +1,23 @@
+.single__element__card {
+  border: 5px ridge black;
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+}
+
+.single__atomicNumber__style {
+  font-size: 30px;
+}
+
+.single__symbol__style {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.single__name__style {
+  font-size: 30px;
+}
+
+.single__atomicMass__style {
+  font-size: 30px;
+}

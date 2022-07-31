@@ -1,16 +1,28 @@
 .element__card {
   border: 1px solid black;
-  height: 95px;
-  width: 80px;
-  padding: 5px;
-  margin: 5px;
+  height: 80px;
+  width: 60px;
+  padding: 2px;
+  margin: 2px;
   align-items: center;
   justify-content: center;
   text-align: left;
 }
 
+.atomicNumber__style {
+  font-size: 12px;
+}
+
 .symbol__style {
   font-size: 24px;
+}
+
+.name__style {
+  font-size: 12px;
+}
+
+.atomicMass__style {
+  font-size: 12px;
 }
 
 .Gas {
@@ -26,25 +38,45 @@
 }
 
 .Unknown {
-  color: dimgray;
+  color: #676;
 }
 
 .Reactive_nonmetals {
-  background-color: lawngreen;
+  background-color: hsl(120deg, 73%, 74%);
 }
 
 .Noble_gases {
-  background-color: mediumorchid;
+  background-color: hsl(300deg, 44%, 82%);
 }
 
 .Alkali_metals {
-  background-color: orange;
+  background-color: hsl(48deg, 77%, 64%);
 }
 
 .Alkali_earth_metals {
-  background-color: gold;
+  background-color: hsl(60deg, 83%, 67%);
 }
 
 .Post-transition_metals {
-  background-color: darkturquoise;
+  background-color: hsl(192deg, 62%, 80%);
+}
+
+.Transition_metals {
+  background-color: hsl(12deg, 87%, 85%);
+}
+
+.Metalloids {
+  background-color: hsl(165deg, 58%, 76%);
+}
+
+.Lanthanoids {
+  background-color: hsl(42deg, 62%, 76%);
+}
+
+.Actinoids {
+  background-color: hsl(340deg, 67%, 88%);
+}
+
+.card__hidden {
+  visibility: hidden;
 }

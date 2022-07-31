@@ -3,9 +3,9 @@ import PeriodicTable from "./components/PeriodicTable/PeriodicTable.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Periodic Table</h2>
+    <div className="app__container">
+      <header className="app__header">
+        <h1>Periodic Table</h1>
       </header>
       <PeriodicTable />
     </div>
