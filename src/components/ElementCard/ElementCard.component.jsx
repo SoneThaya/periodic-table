@@ -8,13 +8,13 @@ const ElementCard = ({
   AtomicMass,
   StateOfMatter,
   Classification,
-  EmptyCard,
+  selectedClassification,
 }) => {
   return (
     <div
       className={`element__card ${
         Classification ? Classification : "card__hidden"
-      }`}
+      } ${selectedClassification ? "filter__elements" : ""}`}
     >
       <div className="atomicNumber__style">{AtomicNumber}</div>
       <div className={`symbol__style ${StateOfMatter}`}>{Symbol}</div>

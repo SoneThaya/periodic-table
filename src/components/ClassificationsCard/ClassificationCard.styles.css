@@ -1,0 +1,12 @@
+.classification__container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+}
+
+.classification__btn {
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+}
