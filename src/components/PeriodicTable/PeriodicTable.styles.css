@@ -7,3 +7,19 @@
   flex-wrap: wrap;
   width: 1260px;
 }
+
+.filter__elements {
+  background-color: white;
+}
+
+.card__btn__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset__btn {
+  height: 50px;
+  width: 200px;
+  font-size: x-large;
+  cursor: pointer;
+}
