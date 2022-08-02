@@ -1,18 +1,3 @@
-.app__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.app__header {
-  background-color: white;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -22,10 +7,17 @@
   }
 }
 .loading-spinner {
-  width: 50px;
-  height: 50px;
+  width: 250px;
+  height: 250px;
   border: 10px solid #f3f3f3; /* Light grey */
   border-top: 10px solid #383636; /* Black */
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
 }
