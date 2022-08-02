@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import ElementCard from "../ElementCard/ElementCard.component";
 import SingleElementCard from "../SingleElementCard/SingleElementCard.component";
+import Render from "../Render/Render.component";
 import { elementsData } from "../../utils/elementsData";
 import { classificationData } from "../../utils/classificationData";
+import { statesOfMatterData } from "../../utils/statesOfMatterData";
 import "./PeriodicTable.styles.css";
 import ClassificationCard from "../ClassificationsCard/ClassificationCard.component";
+import StatesOfMatterKey from "../StatesOfMatterKey/StatesOfMatterKey.component";
 
 const PeriodicTable = () => {
   const [name, setName] = useState("Hydrogen");
@@ -41,21 +44,35 @@ const PeriodicTable = () => {
     <div>
       <div className="card__btn__container">
         <div>
-          <SingleElementCard
-            name={name}
-            atomicMass={atomicMass}
-            symbol={symbol}
-            atomicNumber={atomicNumber}
-            classification={classification}
-            stateOfMatter={stateOfMatter}
-          />
+          <Render>
+            <SingleElementCard
+              name={name}
+              atomicMass={atomicMass}
+              symbol={symbol}
+              atomicNumber={atomicNumber}
+              classification={classification}
+              stateOfMatter={stateOfMatter}
+            />
+          </Render>
         </div>
         <div>
-          <ClassificationCard
-            classificationData={classificationData}
-            filterByClassification={filterByClassification}
-          />
-          <button className="reset__btn" onClick={() => filterByClassification(null)}>Reset</button>
+          <Render>
+            <StatesOfMatterKey statesOfMatterData={statesOfMatterData} />
+          </Render>
+        </div>
+        <div>
+          <Render>
+            <ClassificationCard
+              classificationData={classificationData}
+              filterByClassification={filterByClassification}
+            />
+            <button
+              className="reset__btn"
+              onClick={() => filterByClassification(null)}
+            >
+              Reset
+            </button>
+          </Render>
         </div>
       </div>
       <div className="periodic__table__container">
