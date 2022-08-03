@@ -208,7 +208,7 @@ export const elementsData = [
     Symbol: "Al",
     AtomicNumber: 13,
     AtomicMass: 26.982,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -352,7 +352,7 @@ export const elementsData = [
     Symbol: "Ga",
     AtomicNumber: 31,
     AtomicMass: 69.723,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -496,7 +496,7 @@ export const elementsData = [
     Symbol: "In",
     AtomicNumber: 49,
     AtomicMass: 114.82,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -504,7 +504,7 @@ export const elementsData = [
     Symbol: "Sn",
     AtomicNumber: 50,
     AtomicMass: 118.71,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -639,7 +639,7 @@ export const elementsData = [
     Symbol: "Tl",
     AtomicNumber: 81,
     AtomicMass: 204.38,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -647,7 +647,7 @@ export const elementsData = [
     Symbol: "Pb",
     AtomicNumber: 82,
     AtomicMass: 207.2,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -655,7 +655,7 @@ export const elementsData = [
     Symbol: "Bi",
     AtomicNumber: 83,
     AtomicMass: 208.98,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -663,7 +663,7 @@ export const elementsData = [
     Symbol: "Po",
     AtomicNumber: 84,
     AtomicMass: 209,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Solid",
   },
   {
@@ -782,7 +782,7 @@ export const elementsData = [
     Symbol: "Nh",
     AtomicNumber: 113,
     AtomicMass: 286,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Unknown",
   },
   {
@@ -790,7 +790,7 @@ export const elementsData = [
     Symbol: "Fl",
     AtomicNumber: 114,
     AtomicMass: 289,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Unknown",
   },
   {
@@ -798,7 +798,7 @@ export const elementsData = [
     Symbol: "Mc",
     AtomicNumber: 115,
     AtomicMass: 290,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Unknown",
   },
   {
@@ -806,7 +806,7 @@ export const elementsData = [
     Symbol: "Lv",
     AtomicNumber: 116,
     AtomicMass: 293,
-    Classification: "Post-transition_metals",
+    Classification: "Post_transition_metals",
     StateOfMatter: "Unknown",
   },
   {

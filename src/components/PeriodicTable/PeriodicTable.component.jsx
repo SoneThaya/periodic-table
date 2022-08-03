@@ -3,7 +3,10 @@ import ElementCard from "../ElementCard/ElementCard.component";
 import SingleElementCard from "../SingleElementCard/SingleElementCard.component";
 import Render from "../Render/Render.component";
 import { elementsData } from "../../utils/elementsData";
-import { classificationData } from "../../utils/classificationData";
+import {
+  classificationData,
+  classificationObject,
+} from "../../utils/classificationData";
 import { statesOfMatterData } from "../../utils/statesOfMatterData";
 import "./PeriodicTable.styles.css";
 import ClassificationCard from "../ClassificationsCard/ClassificationCard.component";
@@ -20,7 +23,6 @@ const PeriodicTable = () => {
   const [filterClassData, setFilterClassData] = useState([]);
   const [classData, setClassData] = useState([]);
   const [stateSData, setStateSData] = useState([]);
-  const [override, setOverride] = useState(true);
 
   const updateSingleElementCard = (ele) => {
     setName(ele.Name);
@@ -46,10 +48,11 @@ const PeriodicTable = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      setClassData(classificationData);
+      setClassData(classificationObject);
       //setStateSData(statesOfMatterData);
+      console.log(classData);
     }, 3000);
-  }, [classData, stateSData]);
+  }, [classData, stateSData, setAtomicMass]);
 
   return (
     <div>
@@ -66,13 +69,13 @@ const PeriodicTable = () => {
         </div>
         <div>
           {/* Note Fetching from API */}
-          <Render when={Boolean(stateSData)} override={Boolean(true)}>
+          <Render when={Boolean(stateSData)} override={"background_color_red"}>
             <StatesOfMatterKey statesOfMatterData={statesOfMatterData} />
           </Render>
         </div>
         <div>
           {/* Fetching from API */}
-          <Render when={Boolean(classData)} override={Boolean(false)}>
+          <Render when={Boolean(classData)} override={"background_color_blue"}>
             <ClassificationCard
               classificationData={classData}
               filterByClassification={filterByClassification}
