@@ -14,6 +14,12 @@ const ClassificationCard = ({ classificationData, filterByClassification }) => {
           {ele}
         </button>
       ))}
+      <button
+        className="reset__btn"
+        onClick={() => filterByClassification(null)}
+      >
+        Reset
+      </button>
     </div>
   );
 };

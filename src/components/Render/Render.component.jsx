@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Render = ({ children }) => {
+const Render = (props) => {
   const [isLoading, setIsLoading] = useState(true);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 3000);
+  useEffect(() => {
+    if (props.override) {
+      setIsLoading(!props.override);
+    } else {
+      setIsLoading(!props.when);
+    }
+  }, [isLoading, props]);
 
   return (
     <>
-      {isLoading ? (
+      {isLoading && !props.override ? (
         <div className="spinner-container">
-          <div className="loading-spinner"></div>
+          <div className="loading-spinner">Loading...</div>
         </div>
       ) : (
-        <div>{children}</div>
+        <div>{props.children}</div>
       )}
     </>
   );
