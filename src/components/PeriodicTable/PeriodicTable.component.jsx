@@ -8,6 +8,7 @@ import { statesOfMatterData } from "../../utils/statesOfMatterData";
 import "./PeriodicTable.styles.css";
 import ClassificationCard from "../ClassificationsCard/ClassificationCard.component";
 import StatesOfMatterKey from "../StatesOfMatterKey/StatesOfMatterKey.component";
+import { useEffect } from "react";
 
 const PeriodicTable = () => {
   const [name, setName] = useState("Hydrogen");
@@ -17,6 +18,9 @@ const PeriodicTable = () => {
   const [classification, setClassification] = useState("Reactive_nonmetals");
   const [stateOfMatter, setStateOfMatter] = useState("Gas");
   const [filterClassData, setFilterClassData] = useState([]);
+  const [classData, setClassData] = useState([]);
+  const [stateSData, setStateSData] = useState([]);
+  const [override, setOverride] = useState(true);
 
   const updateSingleElementCard = (ele) => {
     setName(ele.Name);
@@ -40,38 +44,39 @@ const PeriodicTable = () => {
     setFilterClassData(data);
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setClassData(classificationData);
+      //setStateSData(statesOfMatterData);
+    }, 3000);
+  }, [classData, stateSData]);
+
   return (
     <div>
       <div className="card__btn__container">
         <div>
-          <Render>
-            <SingleElementCard
-              name={name}
-              atomicMass={atomicMass}
-              symbol={symbol}
-              atomicNumber={atomicNumber}
-              classification={classification}
-              stateOfMatter={stateOfMatter}
-            />
-          </Render>
+          <SingleElementCard
+            name={name}
+            atomicMass={atomicMass}
+            symbol={symbol}
+            atomicNumber={atomicNumber}
+            classification={classification}
+            stateOfMatter={stateOfMatter}
+          />
         </div>
         <div>
-          <Render>
+          {/* Note Fetching from API */}
+          <Render when={Boolean(stateSData)} override={Boolean(true)}>
             <StatesOfMatterKey statesOfMatterData={statesOfMatterData} />
           </Render>
         </div>
         <div>
-          <Render>
+          {/* Fetching from API */}
+          <Render when={Boolean(classData)} override={Boolean(false)}>
             <ClassificationCard
-              classificationData={classificationData}
+              classificationData={classData}
               filterByClassification={filterByClassification}
             />
-            <button
-              className="reset__btn"
-              onClick={() => filterByClassification(null)}
-            >
-              Reset
-            </button>
           </Render>
         </div>
       </div>
