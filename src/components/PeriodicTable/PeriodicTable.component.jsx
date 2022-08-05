@@ -12,6 +12,14 @@ import "./PeriodicTable.styles.css";
 import ClassificationCard from "../ClassificationsCard/ClassificationCard.component";
 import StatesOfMatterKey from "../StatesOfMatterKey/StatesOfMatterKey.component";
 import { useEffect } from "react";
+import Spinner from "../Spinner/Spinner.component";
+import { ClipLoader, SyncLoader } from "react-spinners";
+
+const override = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 const PeriodicTable = () => {
   const [name, setName] = useState("Hydrogen");
@@ -23,6 +31,9 @@ const PeriodicTable = () => {
   const [filterClassData, setFilterClassData] = useState([]);
   const [classData, setClassData] = useState([]);
   const [stateSData, setStateSData] = useState([]);
+
+  let [loading, setLoading] = useState(true);
+  let [color, setColor] = useState("blue");
 
   const updateSingleElementCard = (ele) => {
     setName(ele.Name);
@@ -69,13 +80,33 @@ const PeriodicTable = () => {
         </div>
         <div>
           {/* Note Fetching from API */}
-          <Render when={Boolean(stateSData)} override={"background_color_red"}>
+          <Render
+            when={Boolean(stateSData)}
+            override={
+              <ClipLoader
+                color={color}
+                loading={loading}
+                cssOverride={override}
+                size={150}
+              />
+            }
+          >
             <StatesOfMatterKey statesOfMatterData={statesOfMatterData} />
           </Render>
         </div>
         <div>
           {/* Fetching from API */}
-          <Render when={Boolean(classData)} override={"background_color_blue"}>
+          <Render
+            when={Boolean(classData)}
+            override={
+              <SyncLoader
+                color={color}
+                loading={loading}
+                cssOverride={override}
+                size={150}
+              />
+            }
+          >
             <ClassificationCard
               classificationData={classData}
               filterByClassification={filterByClassification}

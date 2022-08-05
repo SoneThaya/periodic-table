@@ -11,13 +11,7 @@ const Render = (props) => {
   }, [isLoading, props]);
 
   return (
-    <>
-      {isLoading ? (
-        <Spinner props={props.override} />
-      ) : (
-        <div>{props.children}</div>
-      )}
-    </>
+    <>{isLoading ? <div>{props.override}</div> : <div>{props.children}</div>}</>
   );
 };
 
